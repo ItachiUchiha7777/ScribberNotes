@@ -1,0 +1,129 @@
+/* Light Mode (Default) */
+:root {
+  --background: #f5f5f5;
+  --card-background: #ffffff;
+  --text-color: #363636;
+  --text-light: #7a7a7a;
+  --border-color: #dbdbdb;
+  --input-background: #ffffff;
+  --input-border: #dbdbdb;
+  --placeholder-color: #7a7a7a;
+  --link-color: #3273dc;
+  --primary: #485fc7;
+  --primary-hover: #3a56c0;
+  --danger: #ff3860;
+  --danger-hover: #ff2b56;
+}
+
+/* Dark Mode */
+.dark-mode {
+  --background: #121212;
+  --card-background: #1e1e1e;
+  --text-color: #f5f5f5;
+  --text-light: #aaaaaa;
+  --border-color: #333333;
+  --input-background: #2d2d2d;
+  --input-border: #444444;
+  --placeholder-color: #aaaaaa;
+  --link-color: #4a9ff5;
+  --primary: #586fc8;
+  --primary-hover: #4a62c0;
+  --danger: #ff4f6e;
+  --danger-hover: #ff3d5f;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--background);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Components */
+.box, .card {
+  background-color: var(--card-background);
+  color: var(--text-color);
+  border-color: var(--border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.title, .label, .subtitle {
+  color: var(--text-color) !important;
+}
+
+.input, .textarea, .select select {
+  background-color: var(--input-background);
+  border-color: var(--input-border);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.input::placeholder, .textarea::placeholder {
+  color: var(--placeholder-color);
+}
+
+.notification {
+  background-color: var(--card-background);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+.button.is-primary {
+  background-color: var(--primary);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.button.is-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.button.is-danger {
+  background-color: var(--danger);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.button.is-danger:hover {
+  background-color: var(--danger-hover);
+}
+
+/* Custom Components */
+.navbar.is-primary {
+  background-color: var(--primary) !important;
+}
+
+.navbar-item, .navbar-link {
+  color: white !important;
+}
+
+.navbar-burger {
+  color: white !important;
+}
+
+/* Layout */
+.hero.is-fullheight {
+  min-height: 100vh;
+  background-color: var(--background);
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.card-footer-item {
+  transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .column.is-one-third {
+    width: 100%;
+  }
+}
